@@ -46,7 +46,7 @@ console.log("ACTUAL:");
 const person = {
     name: 'Phil Smith',
     age: 47,
-    height: '6 feet'   //missing comma, should cause an error
+    height: '6 feet' //last object no comma needed
 }
 const password = '12345';
 const { password: hashedPassword } = person;  
