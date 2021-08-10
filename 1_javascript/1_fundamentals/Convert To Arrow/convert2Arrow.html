@@ -1,0 +1,41 @@
+<!--August Cohort - Convert 2 Arrow Assignment-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Arrow Functions</title>
+    </head>
+    <body id="body">
+        <h1>My Company's Boring Website in August 2021</h1>
+        <p id="paragraph">
+            This website is boring, with very little CSS.
+            However, we really just care about the javascript.
+            For example, if you click <button id="button">this button</button>, the background of this paragraph tag will change to salmon.
+        </p>
+        <p>This <button id="alert">alert</button> button will grab the text from the input below &#128071; and show it in a popup.</p>
+
+        <div>
+            <input type="text" size="55" style="border-color: red" id="popup-input" placeholder="&#128073; Enter text here FIRST &#128072; then click the alert button above &#128070;" >
+        </div>
+
+        <p>We just like random interactivity in the site, including a fun effect if you hover over <span id="hover-this">     <b>THIS.</b></span></p>
+        <p id="colorChange" onmouseover="mouseOverFunction(this)" onclick="setBackgroundColorById('colorChange', getValueFromId('enterColor'))">
+            Another task:  This should be another feature. If I <b>mouse over this paragraph,</b> the background color changes to Fuchsia.  When I enter an html color code <a href="https://www.w3schools.com/colors/colors_picker.asp">Click here for more codes</a>, or color here: <input id="enterColor" type="text" placeholder="Enter a color"/>,
+            then <b>click anywhere <u>in this paragraph tag</u></b> the background changes to the color entered.</p>
+
+            <script>
+                document.getElementById("button").onclick = () => setBackgroundColorById("paragraph", "salmon");
+                document.getElementById("alert").onclick = () => alert(document.getElementById("popup-input").value);
+                document.getElementById("hover-this").onmouseover = () => setBackgroundColorById("body", "#40ff00");
+                document.getElementById("hover-this").onmouseout = () => setBackgroundColorById("body", "purple");
+
+                const getValueFromId = (id) => document.getElementById(id).value;
+                const setBackgroundColorById = (id, color) => document.getElementById(id).style = "background-color: " + color;
+                const mouseOverFunction = (element) => element.style = "background-color: fuchsia";
+            </script>
+
+    </body>
+</html>
