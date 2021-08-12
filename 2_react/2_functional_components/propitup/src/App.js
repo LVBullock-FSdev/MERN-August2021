@@ -10,28 +10,28 @@ function App() {
       <PersonCard 
         firstName={ "Mountain" }
         lastName={ "Dew"} 
-        age={ "81" } 
+        age={ 81 } 
         hairColor={ "Hyperactive Green" }
       />
 
       <PersonCard 
         firstName={ "Sierra" }
         lastName={ "Mist"} 
-        age={ "22" } 
+        age={ 22 } 
         hairColor={ "Silver Skateboard" }
       />
 
       <PersonCard 
         firstName={ "Doctor" }
         lastName={ "Pepper"} 
-        age={ "136" } 
+        age={ 136 } 
         hairColor={ "Bursting Brown" }
       />
 
       <PersonCard 
         firstName={ "Cherry" } 
         lastName={ "Pepsi"} 
-        age={ "33" } 
+        age={ 33 } 
         hairColor={ "Caffeinated Red" }
       />
 
