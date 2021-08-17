@@ -4,7 +4,7 @@ const BoxGenerator = (props) => {
     const [boxColor, setBoxColor] = useState("");
 
     const addBox = (e) => {
-        e.preventDefault(); //If not entered, will clear the entries (default is blank)
+        e.preventDefault(); //If not entered, will clear the entries (default is blank) -- Keeps form from submitting and reloading the page
         props.setBox([...props.box, boxColor]); //... means what is already there, add more boxes (does not erase)
         setBoxColor(""); //reset the value of the box color input to empty - Ninja Bonus: clear out the color input on successful submission.
     }
