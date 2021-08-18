@@ -13,6 +13,8 @@ const Tabs = (props) => {
                             padding: "20px", 
                             marginRight: "10px", 
                             border: "1px solid black",
+                            fontWeight: "bold",
+                            backgroundColor: "lavender",
                             borderRadius: "60px"
                         }
 
@@ -25,6 +27,7 @@ const Tabs = (props) => {
                             <span 
                             key={index} //keep track of which tab is selected using index
                                 onClick={(e) =>{
+                                    alert(tab.label + " Clicked");  //?? Sensei Bonus: Add a JavaScript animation to the tab switching action.
                                     setSelectedTab(index);
                                     props.tabButtons[index].callback();
                                 }}

@@ -29,7 +29,7 @@
   color: red;
   font-style: italic;
   animation-name: animate;
-  animation-duration: 5s;
+  animation-duration: 15s;
   border-radius: 5px;
   background-color: purple;
 }
