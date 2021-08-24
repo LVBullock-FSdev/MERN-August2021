@@ -4,13 +4,33 @@ const ToDoForm = (props) =>{
 
     const [title, setTitle] = useState("");
     const [taskList, setTaskList] = useState([]);
-    const [isComplete, setIsComplete] = useState(false);
 
     const submitHandler = (e) =>{
-        e.preventDefault();
+        e.preventDefault();  //do not refresh this page, would lose all state if this is skipped
         //what's already there, then add to it
-        setTaskList([...taskList, {title: title}]);
+        setTaskList([...taskList, {title: title, isComplete: false}]);
         setTitle("");
+    }
+
+    const isCompleteHandler = (e, taskObject) =>{
+        taskObject.isComplete = !taskObject.isComplete;
+        setTaskList([...taskList]); //setter is causing react to overwrite the old version that was in state with our new version of the taskObject
+
+        //REFERENCE ONLY.  The long way to achieve this.
+        // setTaskList(taskList.map((taskObj) => {
+        //     if(taskObj === taskObject) { //is this the same as the task object that we need to update
+                
+        //         //get a copy, modify, then return the new version over into our state
+        //         let updatedTask = {
+        //             ...taskObj
+        //         }
+        //         updatedTask.isComplete = !updatedTask.isComplete
+        //         return updatedTask //this new object is used to replace the original object in state
+        //     } 
+        //     else {
+        //         return taskObj //return the original task object, untouched
+        //     }
+        // }))
     }
 
     return(
@@ -40,26 +60,28 @@ const ToDoForm = (props) =>{
                 <hr></hr>
 
                 <div>
-                    <h1>Tasks to be completed:</h1>
+                    <h3>Tasks to be completed:</h3>
                     {
-                        taskList.map((title, index)=>(
+                        taskList.map((task, index)=>(
                             <div key={index}>
                                 <input 
-                                    // value={isComplete} 
-                                    // name="isComplete" 
-                                    onChange={(e)=>setIsComplete(!isComplete)} 
+                                    onChange={(e)=>isCompleteHandler(e, task)} 
                                     type="checkbox"
-                                    checked={title.isComplete}
-                                    style={title.isComplete ? {textDecoration: "line-through"} : null }  //not working
+                                    checked={task.isComplete} //object (title)
                                 />
-
-                                    <div style={{marginLeft: 0, display: "inline-block"}}>{title.title}
-                                    </div>
                                     {
-                                        isComplete === true ? 
-                                            <button style={{backgroundColor: "red", borderRadius: 5}}>Delete</button> //showing up on all titles when 1 is checked.  Goes away if multiple are checked -- Why is it doing this?
-                                            : null
+                                        task.isComplete === true ? 
+                                        <span style={{ textDecorationLine: task.isComplete && 'line-through'}}>{task.title}
+
+                                        {/*Allow the user to remove a task by clicking the delete button. (****if you want only checked/completed tasked to be deleted, place the button here***** */}
+                                        <button style={{backgroundColor: "red", color: "white", borderRadius: 5, display: 'inline-block'}}>Delete</button> 
+
+                                        </span> 
+
+                                        : <span>{task.title}</span>
                                     }
+                                    {/* Allow the user to remove a task by clicking the delete button. ****Place button here if you want to allow user to delete any task***** */}
+                                     {/* <button style={{backgroundColor: "red", color: "white", borderRadius: 5, display: 'inline-block'}}>Delete</button>  */}
 
                             </div>
                         ))
