@@ -1,4 +1,5 @@
-Faker API
+Faker API - https://login.codingdojo.com/m/146/6934/50091
+
 To solidify the concepts of making our own api, we are going to create an api that generates a random user on a GET request. We will be using Postman to make our GET requests.
 
 
