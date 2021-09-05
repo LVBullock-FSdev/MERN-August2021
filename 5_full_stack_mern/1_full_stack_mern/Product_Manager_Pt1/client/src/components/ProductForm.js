@@ -38,7 +38,8 @@ const ProductForm = () => {
 
             <p>
                 <label>Price:  </label><br/>
-                <input type="number" step="0.01" onChange = {(e) => setPrice(e.target.value)}/>
+                {/* step="0.01" is the float, accepts 2 decimal points; step="any" allows more*/}
+                <input type="number" step="0.01" onChange = {(e) => setPrice(e.target.value)}/>  
             </p>
 
             <p>
