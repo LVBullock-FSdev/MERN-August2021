@@ -61,6 +61,37 @@ module.exports.getProduct = (request, response) => {
         .catch(err => response.json(err))
 }
 
+module.exports.updateProduct = (request, response) => {
+    Product.findOneAndUpdate({_id: request.params.id}, request.body, {new:true})
+        .then(updatedProduct => {
+
+            console.log("This product was updated.")
+
+            //This response.json seems to function properly for front and backend.
+            response.json(updatedProduct)
+            //When I the response.json below, frontend returns props.products.map is not a function
+            // response.json({
+            //     message:  "Updated product.",
+            //     updatedProduct: updatedProduct
+            // });
+        })
+        .catch(err => response.json(err))
+}
+
+module.exports.deleteProduct = (request, response) => {
+    Product.deleteOne({ _id: request.params.id })
+    .then(deletedProduct => {
+        console.log("The product was deleted.")
+        //This response.json seems to function properly for front and backend.
+        response.json(deletedProduct)
+        //When I the response.json below, frontend returns props.products.map is not a function
+        // response.json({
+        //     message:  "Deleted product.",
+        //     updatedProduct: DeletedProduct
+        // });
+    })
+    .catch(err => response.json(err))    
+}
 
 //************NOTES & QUESTIONS BELOW********************************** */
 

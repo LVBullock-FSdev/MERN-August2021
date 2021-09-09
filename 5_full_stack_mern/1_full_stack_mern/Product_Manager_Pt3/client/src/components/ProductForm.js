@@ -40,21 +40,40 @@ const ProductForm = (props) => {
         <form onSubmit={onSubmitHandler}>
             <p>
                 <label><strong>Title: </strong></label>
-                <input type="text" value={title} placeholder="Enter the product title" onChange={(e)=>setTitle(e.target.value)}/>
+                <input 
+                    type="text" 
+                    value={title} 
+                    placeholder="Enter a product" 
+                    onChange={(e)=>setTitle(e.target.value)}
+                />
             </p>
 
             <p>
                 <label><strong>Price: </strong> </label>
                 {/* step="0.01" is the float, accepts 2 decimal points; step="any" allows more*/}
-                <input type="number" value={price} step="0.01" onChange={(e)=> setPrice(e.target.value)}/>  
+                <input 
+                    type="number" 
+                    value={price} 
+                    step="0.01" 
+                    onChange={(e)=> setPrice(e.target.value)}
+                />  
             </p>
 
             <p>
                 <label><strong>Description:  </strong></label>
-                <input type="text" value={description} placeholder="Enter the product description" onChange={(e)=>setDescription(e.target.value)}/>
+                <input 
+                    type="text" 
+                    value={description} 
+                    placeholder="Enter the product description" 
+                    onChange={(e)=>setDescription(e.target.value)}
+                />
             </p>
 
-            <input type="submit" value="Add Product"/>
+            <input 
+                style={{backgroundColor: "#004B00", color: "white", marginBottom: "5px"}}
+                type="submit" 
+                value="Add Product"
+            />
         </form>
     )
 }
