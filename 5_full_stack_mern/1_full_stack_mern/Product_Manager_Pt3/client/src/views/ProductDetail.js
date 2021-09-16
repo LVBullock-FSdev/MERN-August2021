@@ -4,7 +4,7 @@ import { Link, navigate } from '@reach/router';
 
 const ProductDetail = (props) => {
 
-    const [product, setProduct] = useState({})
+    const[product, setProduct] = useState({})
 
     useEffect(() => {
         axios.get("http://localhost:8000/api/products/" + props.id + "/details")
