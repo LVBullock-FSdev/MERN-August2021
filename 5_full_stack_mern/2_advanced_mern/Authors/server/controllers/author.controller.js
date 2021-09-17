@@ -55,14 +55,14 @@ module.exports = {
             });
     },
     
-        //DELETE - DELETE
-        deleteAuthor: (req, res) => {
-            //id will come to use from the param/url/route call   (using GET)         /api/authors/:id  similar to findOne, but change to delete
-            Author.deleteOne({ _id: req.params.id })      
-            .then((deletedAuthor) =>res.json(deletedAuthor))
-            .catch((err) => {
-                console.log("Delete Author failed");
-                res.status(400).json(err)            
-            })
-        }
+    //DELETE - DELETE
+    deleteAuthor: (req, res) => {
+        //id will come to use from the param/url/route call   (using GET)         /api/authors/:id  similar to findOne, but change to delete
+        Author.deleteOne({ _id: req.params.id })      
+        .then((deletedAuthor) =>res.json(deletedAuthor))
+        .catch((err) => {
+            console.log("Delete Author failed");
+            res.status(400).json(err)            
+        })
+    }
 }

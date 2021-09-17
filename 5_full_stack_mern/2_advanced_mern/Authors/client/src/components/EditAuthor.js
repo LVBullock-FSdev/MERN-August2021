@@ -22,7 +22,7 @@ const EditAuthor = (props) =>{
         .catch((err)=>{
             console.log(err);
         })
-    }, [])
+    }, [props.id])
 
     const editAuthorHandler = (e) => {
         e.preventDefault();
