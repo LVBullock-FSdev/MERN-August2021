@@ -34,7 +34,7 @@ const Form = (props) =>{
     <form onSubmit={submitHandler}>
         <div>
             <label htmlFor="name"><strong>Name:</strong></label>
-            <input onChange={newChangeHandler} name="name" type="text" value={author.name} />
+            <input onChange={newChangeHandler} name="name" type="text" placeholder="Enter Author's name" value={author.name} />
             {
                 errors.name ?
                 //change to className error-text

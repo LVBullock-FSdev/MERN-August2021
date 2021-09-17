@@ -33,7 +33,7 @@ const NewAuthor = (props) =>{
     return(
         <div>
             <Link to="/authors">Home</Link>
-            <p>Add a new Author:</p>
+            <h2>Add a new Author</h2>
             <Form 
             submitHandler = { newSubmitHandler }
             buttonText="Submit"

@@ -26,14 +26,13 @@ const AllAuthors = (props) =>{
     return(
         <div className="body">
                 <Link to="/author/new">Add an Author</Link>
-                <h2>We have quotes by:</h2>
+                <h2>Catalogue of Authors</h2>
                 
                 <table style={{textAlign: "left"}}>
                     <thead>
                         <tr>
-                            <th>Author</th>    
-                            <th>Actions Available</th>
-                            <th></th>
+                            <th style={{textAlign: "center"}}>Author</th>    
+                            <th style={{borderLeft: "solid 1px black", textAlign: "center"}}>Actions Available</th>
                         </tr>
                     </thead>
                         <tbody>
@@ -41,14 +40,11 @@ const AllAuthors = (props) =>{
                             authorList.map((author, index) => (
                                 <tr key={index}>
                                     <td>{author.name}</td>
-                                    <td><Link to={`/author/edit/${author._id}`}><button id="edit">Edit</button></Link></td>
-                                    <td>
-                                        <DeleteAuthor 
+                                    <td id="actions" style={{borderLeft: "solid 1px black"}}><Link to={`/author/edit/${author._id}`}><button id="edit">Edit</button></Link>
+                                    <DeleteAuthor 
                                                 authorList={authorList} 
                                                 setAuthorList={setAuthorList} 
-                                                id={author._id}
-                                        />
-                                    </td>
+                                                id={author._id}/></td>
                                 </tr>
                             ))
                         }
