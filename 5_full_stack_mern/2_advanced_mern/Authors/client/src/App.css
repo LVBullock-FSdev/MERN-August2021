@@ -7,34 +7,21 @@ a{
   color: blue;
 }
 
-table{
-  border-collapse: collapse;
-  width: 20%;
-}
-
-table tr {
-  border: solid 1px black;
-}
-
 th {
   text-align: left;
-  background-color: darkgrey;
   color: white;
+  margin-top: 5px;
+  vertical-align: middle;
 }
 
 tr:nth-child(even){
   background-color: lightgrey;
 }
 
-th, td {
-  padding-left: 5px;
-  padding-top: 12px;
-  padding-bottom: 12px;
-}
-
 #actions {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  border: 0px;
 }
 
 button{
@@ -54,8 +41,9 @@ button{
 }
 #edit, #delete{
   width: 85px;
-  height: 25px;
+  height: 35px;
   padding: 2px;
+  text-align: center;
 }
 
 button:hover{
@@ -86,8 +74,8 @@ label {
 }
 
 input{
-  width: 150px;
-  margin:10px auto;
+  width: 200px;
+  margin: 10px auto;
   padding: 5px;
   background-color: white;
   border: 1px solid black;

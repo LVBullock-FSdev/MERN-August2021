@@ -26,19 +26,19 @@ const AllAuthors = (props) =>{
                 <Link to="/author/new">Add an Author</Link>
                 <h2>Catalogue of Authors</h2>
                 
-                <table style={{textAlign: "left"}}>
+                <table className="table table-bordered" style={{border: "1px solid black", width: "30%"}} >
                     <thead>
-                        <tr>
-                            <th style={{textAlign: "center"}}>Author</th>    
-                            <th style={{borderLeft: "solid 1px black", textAlign: "center"}}>Actions Available</th>
+                        <tr style={{height: "60px"}}>
+                            <th style={{backgroundColor: "lightgrey", verticalAlign: "middle"}}>Author</th>    
+                            <th style={{backgroundColor: "lightgrey", verticalAlign: "middle"}}>Actions Available</th>
                         </tr>
                     </thead>
                         <tbody>
                         {
                             authorList.map((author, index) => (
                                 <tr key={index}>
-                                    <td>{author.name}</td>
-                                    <td id="actions" style={{borderLeft: "solid 1px black"}}><Link to={`/author/edit/${author._id}`}><button id="edit">Edit</button></Link>
+                                    <td style={{paddingTop: "20px"}}>{author.name}</td>
+                                    <td id="actions"><Link to={`/author/edit/${author._id}`}><button id="edit">Edit</button></Link>
                                     <DeleteAuthor 
                                                 authorList={authorList} 
                                                 setAuthorList={setAuthorList} 
