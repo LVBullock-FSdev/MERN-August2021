@@ -4,7 +4,7 @@ html, body{
 }
 
 a{
-  color:blue;
+  color: blue;
 }
 
 table{
@@ -20,7 +20,6 @@ th {
   text-align: left;
   background-color: darkgrey;
   color: white;
-
 }
 
 tr:nth-child(even){
@@ -34,7 +33,7 @@ th, td {
 }
 
 #actions {
-  display:flex;
+  display: flex;
   justify-content: space-evenly;
 }
 

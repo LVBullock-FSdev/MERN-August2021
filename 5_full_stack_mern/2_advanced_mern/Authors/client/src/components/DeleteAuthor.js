@@ -13,7 +13,6 @@ const DeleteAuthor = (props) =>{
         setAuthorList(newList);
     }
 
-
     const deleteHandler = (e) => {
         axios.delete(`http://localhost:8000/api/authors/${id}`)
         .then((res) =>{

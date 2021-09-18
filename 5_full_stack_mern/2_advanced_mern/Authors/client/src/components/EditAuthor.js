@@ -22,7 +22,7 @@ const EditAuthor = (props) =>{
         .catch((err)=>{
             console.log(err);
         })
-    }, [props.id])
+    }, [props.id]) //If I do not add props.id, will get a warning.
 
     const editAuthorHandler = (e) => {
         e.preventDefault();

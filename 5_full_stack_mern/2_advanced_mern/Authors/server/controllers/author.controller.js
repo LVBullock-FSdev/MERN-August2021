@@ -2,7 +2,7 @@ const Author = require("../models/author.model");
 
 module.exports = {
 
-        //get all documents from the "authors" collection
+    //get all documents from the "authors" collection
     //and return an array of "author" documents (js objects)
 
     //get all documents from the "authors" collection and return an array of the "author" documents
@@ -20,7 +20,8 @@ module.exports = {
         })
     },
 
-    //CREATE - POST
+    //CRUD (Create, Read, Update, Destroy)
+    //CREATE - POST  (using POST)
     createNewAuthor:(req, res) => {
         Author.create(req.body)
         .then((newAuthor) => res.json(newAuthor))
@@ -41,6 +42,7 @@ module.exports = {
         })
     },
 
+    //UPDATE - PUT
     updateAuthor: (req, res) => {
         //id will come to use from the param/url/route call  (using PUT)          /api/authors/:id
         Author.findOneAndUpdate(
@@ -55,9 +57,9 @@ module.exports = {
             });
     },
     
-    //DELETE - DELETE
+    //DESTROY - DELETE
     deleteAuthor: (req, res) => {
-        //id will come to use from the param/url/route call   (using GET)         /api/authors/:id  similar to findOne, but change to delete
+        //id will come to use from the param/url/route call   (using DELETE)         /api/authors/:id  similar to findOne, but change to delete
         Author.deleteOne({ _id: req.params.id })      
         .then((deletedAuthor) =>res.json(deletedAuthor))
         .catch((err) => {

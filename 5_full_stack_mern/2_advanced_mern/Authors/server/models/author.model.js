@@ -8,11 +8,9 @@ const AuthorSchema = new mongoose.Schema({
         minLength:[3, "Name must be at least 3 characters long!"]
     },
 
-
 //timestamps automatically create "createdAt" and "updatedAt" date and time info for each document
 //every time a document is updated, it will change the "updatedAt"
 }, { timestamps: true });
-
 
 //Model is a combination of the collectionName and Schema
 //Name will be collection name that is held in the db
