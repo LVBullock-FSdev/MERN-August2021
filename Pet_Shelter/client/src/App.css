@@ -1,0 +1,96 @@
+html,
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
+  font-size: 20px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.headerLink {
+  padding-top: 20px;
+  font-size: 16px;
+  position: fixed;
+  right: 202px;
+}
+
+.App {
+  text-align: left;
+  margin: 20px;
+}
+
+
+h1 {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+table table-bordered {
+  border: 1px solid black;
+}
+
+tr {
+  font-size: 20px;
+}
+
+tr:nth-child(even) {
+  background-color: lightgrey;
+}
+
+.formLeft,
+.formRight {
+  display: inline-table;
+  font-size: 20px;
+
+
+  /* justify-content: space-between; */
+}
+
+
+.blankLine {
+  padding-bottom: 20px;
+}
+
+input {
+  width: 350px;
+  border: 2px solid black;
+
+}
+
+button {
+  color: white;
+  width: 200px;
+  height: 40px;
+  border: 2px solid black;
+  padding: 3px;
+  box-shadow: 10px 10px 11px;
+  margin: 7px 3px;
+}
+
+.blueBtn {
+  background-color: blue;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.columnWidth {
+  width: 240px;
+}
+
+.rowHeight {
+  height: 30px;
+}
+
+.container {
+  width: 100vw;
+  border: 2px solid black;
+  margin: 0px auto;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding: 30px;
+}
