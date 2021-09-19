@@ -1,7 +1,7 @@
 //configure connection with mongo using mongoose
 const mongoose = require("mongoose");
 //database name
-const dbName = "products"; 
+const dbName = "pets"; 
 
 //need to install software, walkthrough on the platform.  Test the you're connected to mongo in terminal
 mongoose.connect("mongodb://localhost/" + dbName, {
@@ -22,4 +22,4 @@ mongoose.connect("mongodb://localhost/" + dbName, {
         console.log(err);
     })
 
-    //do not have to export this
+    //do not have to export this one
