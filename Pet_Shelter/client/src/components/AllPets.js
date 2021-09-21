@@ -27,12 +27,12 @@ const AllPets = (props) =>{
             <Header/>
             <h3>These pets are looking for a good home</h3><br/>
                 
-            <table className="table table-bordered" style={{border: "1px solid black", width: "50%"}} >
+            <table className="table table-bordered" style={{border: "1px solid black", borderCollapse: "collapse", width: "50%"}} >
                 <thead>
                     <tr>
-                        <th style={{backgroundColor: "darkgrey", verticalAlign: "middle"}}>Name</th>
-                        <th style={{backgroundColor: "darkgrey", verticalAlign: "middle"}}>Type</th>    
-                        <th style={{backgroundColor: "darkgrey", verticalAlign: "middle"}}>Actions</th>
+                        <th>Name</th>
+                        <th style={{borderLeft: "1px solid black"}}>Type</th>    
+                        <th style={{borderLeft: "1px solid black"}}>Actions</th>
                     </tr>
                 </thead>
                     <tbody>
@@ -40,8 +40,8 @@ const AllPets = (props) =>{
                         petList.map((pet, index) => (
                             <tr key={index}>
                                 <td>{pet.name}</td>
-                                <td>{pet.type}</td>
-                                <td><Link to={`/pet/${pet._id}`}>details</Link>&nbsp;|&nbsp;
+                                <td style={{borderLeft: "1px solid black"}}>{pet.type}</td>
+                                <td style={{borderLeft: "1px solid black"}}><Link to={`/pet/${pet._id}`}>details</Link>&nbsp;|&nbsp;
                                 <Link to={`/pet/edit/${pet._id}`}>edit</Link>
                                 
                                 </td> 

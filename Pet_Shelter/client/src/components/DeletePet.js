@@ -5,7 +5,7 @@ import { navigate } from '@reach/router';
 
 const DeletePet = (props) =>{
 
-    const {id, petList, setPetList, onePet} = props;
+    const {id, petList, setPetList} = props; //adding onePet does not work for the value in the delete button?????
 
 
     //filter method

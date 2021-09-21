@@ -1,28 +1,32 @@
+Pet_Shelter_Exam.zip
+Pet_Shelter.zip
+Pet_Shelter/client/src/App.css
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
+/Pet_Shelter
+Pet_Shelter\
+Pet_Shelter/
 # dependencies
 node_modules/
-.pnp/
+/.pnp
 .pnp.js
 
 # testing
-coverage/
+/coverage
 
 # production
-build/
+/build
 
 # misc
-*.zip
-package-lock.json
-
 .DS_Store
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
 
-.eslintcache
-
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+Pet_Shelter/client/src/components/AllPets.js
+Pet_Shelter/client/src/App.css
+Pet_Shelter/client/src/components/DeletePet.js
+Pet_Shelter/client/src/components/Form.js

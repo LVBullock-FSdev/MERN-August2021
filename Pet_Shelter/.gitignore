@@ -1,1 +1,6 @@
 node_modules/
+Pet_Shelter/
+Pet_Shelter/client/src/components/AllPets.js
+Pet_Shelter/client/src/App.css
+Pet_Shelter/client/src/components/DeletePet.js
+Pet_Shelter/client/src/components/Form.js

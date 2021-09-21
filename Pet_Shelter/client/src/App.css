@@ -28,16 +28,21 @@ h1 {
   margin-bottom: 20px;
 }
 
-table table-bordered {
-  border: 1px solid black;
-}
-
 tr {
   font-size: 20px;
 }
 
 tr:nth-child(even) {
   background-color: lightgrey;
+}
+
+th {
+  background-color: darkgrey;
+  vertical-align: middle;
+}
+
+th, td {
+  padding: 5px;
 }
 
 .formLeft,
@@ -57,7 +62,7 @@ tr:nth-child(even) {
 input {
   width: 350px;
   border: 2px solid black;
-
+  font-size: 20px;
 }
 
 button {

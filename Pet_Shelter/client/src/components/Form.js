@@ -24,7 +24,7 @@ const Form = (props) =>{
         <div className="formLeft">
             <div className="blankLine">
                 <label htmlFor="name"><strong>Pet Name:</strong></label><br/>
-                <input onChange={newChangeHandler} name="name" type="text" value={pet.name} />
+                <input onChange={newChangeHandler} name="name" placeholder="Enter the pet's name." type="text" value={pet.name} />
                 {
                     errors.name ?
                     //change to className error-text
@@ -36,7 +36,7 @@ const Form = (props) =>{
 
             <div className="blankLine">
                 <label htmlFor="type"><strong>Pet Type:</strong></label><br/>
-                <input onChange={newChangeHandler} name="type" type="text" value={pet.type} />
+                <input onChange={newChangeHandler} name="type" placeholder="What type of pet?  i.e. 'cat', 'dog', etc." type="text" value={pet.type} />
                 {
                     errors.type ?
                     //change to className error-text
@@ -48,7 +48,7 @@ const Form = (props) =>{
 
             <div>
                 <label htmlFor="description"><strong>Pet Description:</strong></label><br/>
-                <input onChange={newChangeHandler} name="description" type="text" value={pet.description} />
+                <input onChange={newChangeHandler} name="description" placeholder="Please describe the pet." type="text" value={pet.description} />
                 {
                     errors.description ?
                     //change to className error-text
