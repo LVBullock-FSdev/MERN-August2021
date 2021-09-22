@@ -24,8 +24,8 @@ class PersonCard extends Component {
         return ( //jsx that we want to show
             <div className="module">
                 <h1>{ firstName } { lastName } </h1>
-                <p>Age: &nbsp;{ this.state.currentAge }</p>
-                <p>Hair Color: &nbsp;{ hairColor }</p>
+                <p><strong>Age:</strong> &nbsp;{ this.state.currentAge }</p>
+                <p><strong>Hair Color:</strong> &nbsp;{ hairColor }</p>
                 <button onClick = { birthdayClickHandler } >Birthday Button for { firstName } { lastName }</button>
             </div>
         );
